@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome Prodotto - Il Mio Mercatino</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .product-image-main {
+            max-height: 500px; /* Limita altezza immagine principale */
+        }
+        .thumbnail-gallery img {
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+        .thumbnail-gallery img:hover,
+        .thumbnail-gallery img.active-thumbnail {
+            border-color: #3b82f6; /* Blu di Tailwind */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600 hover:text-blue-800">Il Mio Mercatino</a>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a></li>
+                    <li><a href="prodotti.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Prodotti</a></li>
+                    <li><a href="contatti.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contatti & Pagamenti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <div class="mb-4">
+                        <img id="mainImage" src="https://placehold.co/800x600/e2e8f0/cbd5e0?text=Immagine+Principale" alt="[Immagine principale del prodotto]" class="w-full h-auto object-contain rounded-lg shadow-md product-image-main">
+                    </div>
+                    <div class="thumbnail-gallery grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2">
+                        <img src="https://placehold.co/100x100/e2e8f0/cbd5e0?text=Thumb+1" alt="[Thumbnail 1]" class="w-full h-20 object-cover rounded-md active-thumbnail" onclick="changeImage('https://placehold.co/800x600/e2e8f0/cbd5e0?text=Immagine+1', this)">
+                        <img src="https://placehold.co/100x100/d1d5db/9ca3af?text=Thumb+2" alt="[Thumbnail 2]" class="w-full h-20 object-cover rounded-md" onclick="changeImage('https://placehold.co/800x600/d1d5db/9ca3af?text=Immagine+2', this)">
+                        <img src="https://placehold.co/100x100/9ca3af/4b5563?text=Thumb+3" alt="[Thumbnail 3]" class="w-full h-20 object-cover rounded-md" onclick="changeImage('https://placehold.co/800x600/9ca3af/4b5563?text=Immagine+3', this)">
+                        </div>
+                </div>
+
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">[NOME PRODOTTO ECCELLENTE]</h1>
+                    <p class="text-gray-500 text-sm mb-4">Codice Articolo: [SKU001] (opzionale)</p>
+                    
+                    <p class="text-3xl font-bold text-blue-600 mb-6">[PREZZO €]</p>
+
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold text-gray-700 mb-2">Descrizione Dettagliata</h2>
+                        <p class="text-gray-600 leading-relaxed">
+                            [Qui inserirai una descrizione completa e accattivante del tuo prodotto. Sii onesto riguardo le condizioni, evidenziando i punti di forza e l'eccellenza dell'usato. Ad esempio: "Splendida lampada da tavolo vintage anni '70, perfettamente funzionante e in condizioni eccellenti. Realizzata in metallo cromato e vetro opalino, presenta solo minimi segni del tempo che ne attestano l'autenticità. Un pezzo unico per dare un tocco di stile retrò alla tua casa."]
+                        </p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-2">Caratteristiche / Condizioni</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Materiale: [Es. Legno massello, Cotone, Metallo]</li>
+                            <li>Dimensioni: [Es. 30cm x 20cm x 15cm]</li>
+                            <li>Colore: [Es. Rosso brillante]</li>
+                            <li>Stato: [Es. Usato eccellente, Come nuovo, Presenta lievi segni di usura (vedi foto)]</li>
+                            <li>Note aggiuntive: [Es. Pezzo da collezione, Edizione limitata, Non più in produzione]</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-2">Interessato a questo articolo?</h3>
+                        <p class="text-gray-600 mb-4">
+                            Per acquistare questo prodotto o per maggiori informazioni, <a href="contatti.html" class="text-blue-600 hover:text-blue-800 font-semibold hover:underline">contattami direttamente</a>.
+                            Ricorda di specificare il nome o il codice dell'articolo.
+                        </p>
+                        <a href="contatti.html" class="inline-block w-full sm:w-auto text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg">
+                            Contattami per l'acquisto
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; <span id="currentYear"></span> Il Mio Mercatino. Tutti i diritti riservati.</p>
+            <p class="text-sm text-gray-400 mt-2">Un piccolo negozio con grandi tesori.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script per aggiornare l'anno nel footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Script per cambiare l'immagine principale al click sulla thumbnail
+        function changeImage(newImageSrc, clickedThumbnail) {
+            document.getElementById('mainImage').src = newImageSrc;
+            // Aggiorna la classe 'active-thumbnail'
+            const thumbnails = document.querySelectorAll('.thumbnail-gallery img');
+            thumbnails.forEach(thumb => thumb.classList.remove('active-thumbnail'));
+            clickedThumbnail.classList.add('active-thumbnail');
+        }
+    </script>
+
+</body>
+</html>

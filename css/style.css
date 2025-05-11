@@ -1,0 +1,35 @@
+/* css/style.css */
+
+/*
+  Puoi usare questo file per aggiungere stili CSS personalizzati
+  che potrebbero non essere facilmente realizzabili solo con Tailwind CSS,
+  o per definire stili globali specifici.
+
+  Per ora, lo lasciamo semplice.
+  Tailwind CSS è incluso direttamente negli file HTML tramite CDN.
+*/
+
+body {
+    /* Esempio: se volessi un font di fallback diverso o un colore di sfondo base
+       che non sia gestito da Tailwind (anche se Tailwind è molto completo).
+       Attualmente, il font 'Inter' è caricato e applicato tramite Tailwind config
+       e un tag <style> direttamente negli HTML.
+    */
+    /* font-family: 'Arial', sans-serif; */
+}
+
+/* Esempio di uno stile personalizzato per un elemento specifico */
+/*
+.mio-elemento-speciale {
+    border: 2px solid red;
+    padding: 10px;
+}
+*/
+
+/* Stili per migliorare l'accessibilità dei focus (opzionale, Tailwind ne ha di suoi) */
+/*
+a:focus, button:focus, input:focus, textarea:focus, select:focus {
+    outline: 2px solid #3b82f6; 
+    outline-offset: 2px;
+}
+*/

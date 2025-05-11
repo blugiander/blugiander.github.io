@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti e Pagamenti - Il Mio Mercatino</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600 hover:text-blue-800">Il Mio Mercatino</a>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a></li>
+                    <li><a href="prodotti.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Prodotti</a></li>
+                    <li><a href="contatti.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contatti & Pagamenti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+        <section class="mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-8 text-center">Contattami e Info Pagamenti</h1>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-semibold text-gray-700 mb-6">Come Contattarmi</h2>
+                    <p class="text-gray-600 mb-4">
+                        Per qualsiasi domanda sui prodotti, per concordare un acquisto o per dettagli sulla spedizione, non esitare a contattarmi!
+                    </p>
+                    <p class="text-gray-600 mb-2">
+                        <strong>Email:</strong> <a href="mailto:latuaemail@example.com" class="text-blue-600 hover:underline">latuaemail@example.com</a> 
+                        <span class="text-sm text-gray-500">(Sostituisci con la tua vera email)</span>
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        <strong>Telefono/WhatsApp (Opzionale):</strong> Se preferisci, puoi inserire qui un numero.
+                    </p>
+                    <p class="text-gray-600">
+                        Risponderò il prima possibile!
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-semibold text-gray-700 mb-6">Modalità di Pagamento</h2>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-medium text-gray-700 mb-2">PayPal</h3>
+                        <p class="text-gray-600">
+                            Accetto pagamenti tramite PayPal. Puoi inviare il pagamento a:
+                            <br><strong>Il tuo indirizzo email PayPal</strong> o <a href="https://paypal.me/tuoutente" target="_blank" class="text-blue-600 hover:underline">paypal.me/tuoutente</a> (se hai un link PayPal.Me).
+                        </p>
+                    </div>
+                    <div class="mb-8">
+                        <h3 class="text-xl font-medium text-gray-700 mb-2">Ricarica PostePay</h3>
+                        <p class="text-gray-600">
+                            È possibile pagare anche tramite ricarica PostePay. I dati per la ricarica verranno forniti privatamente dopo aver concordato l'acquisto, per motivi di sicurezza.
+                        </p>
+                    </div>
+
+                    <h2 class="text-2xl font-semibold text-gray-700 mb-6">Spedizione</h2>
+                    <p class="text-gray-600 mb-4">
+                        La spedizione è a carico dell'acquirente. Utilizzo solitamente [Nome Corriere, es. Poste Italiane, SDA] con spedizione tracciabile.
+                    </p>
+                    <p class="text-gray-600">
+                        I costi di spedizione variano in base al peso e alle dimensioni del pacco, e alla destinazione. Contattami per una stima precisa prima dell'acquisto.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; <span id="currentYear"></span> Il Mio Mercatino. Tutti i diritti riservati.</p>
+            <p class="text-sm text-gray-400 mt-2">Un piccolo negozio con grandi tesori.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script per aggiornare l'anno nel footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

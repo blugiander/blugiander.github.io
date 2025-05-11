@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boss GT-1 Processore Effetti - Il Mio Mercatino</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .product-image-main {
+            max-height: 500px; /* Limita altezza immagine principale */
+            background-color: #f9fafb; /* Sfondo leggero per l'immagine */
+        }
+        .thumbnail-gallery img {
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: border-color 0.3s ease;
+            background-color: #f9fafb;
+        }
+        .thumbnail-gallery img:hover,
+        .thumbnail-gallery img.active-thumbnail {
+            border-color: #3b82f6; /* Blu di Tailwind */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600 hover:text-blue-800">Il Mio Mercatino</a>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a></li>
+                    <li><a href="prodotti.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Prodotti</a></li>
+                    <li><a href="contatti.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contatti & Pagamenti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+        <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <div class="mb-4">
+                        <img id="mainImage" src="immagini/boss-gt1.jpg" alt="Boss GT-1 Processore Effetti per Chitarra" class="w-full h-auto object-contain rounded-lg shadow-md product-image-main" onerror="this.onerror=null;this.src='https://placehold.co/800x600/e2e8f0/cbd5e0?text=Immagine+non+trovata';this.alt='Immagine prodotto non trovata';">
+                    </div>
+                    <div class="thumbnail-gallery grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2">
+                        <img src="immagini/boss-gt1.jpg" alt="Boss GT-1 Vista Frontale" class="w-full h-20 object-cover rounded-md active-thumbnail" onclick="changeImage('immagini/boss-gt1.jpg', this)" onerror="this.onerror=null;this.src='https://placehold.co/100x100/e2e8f0/cbd5e0?text=Thumb+1';this.alt='Thumbnail non trovata';">
+                        
+                        </div>
+                </div>
+
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">Boss GT-1 Processore Effetti per Chitarra</h1>
+                    <p class="text-gray-500 text-sm mb-4">Codice Articolo: BOSS-GT1-001 (puoi cambiarlo o rimuoverlo)</p>
+                    
+                    <p class="text-3xl font-bold text-blue-600 mb-6">70,00 €</p>
+
+                    <div class="mb-6">
+                        <h2 class="text-xl font-semibold text-gray-700 mb-2">Descrizione Prodotto</h2>
+                        <p class="text-gray-600 leading-relaxed mb-2">
+                            Questo è un eccellente **Processore Effetti per Chitarra Boss GT-1**.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Ultra-portatile e facile da usare, il GT-1 vi mette a disposizione timbriche di livello professionale ovunque suoniate. Perfetto sia per principianti che per chitarristi esperti che cercano una soluzione compatta e potente.
+                        </p>
+                    </div>
+
+                    <div class="mb-6">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-2">Caratteristiche e Condizioni</h3>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>**Tipologia:** Processore multi-effetto per chitarra</li>
+                            <li>**Portabilità:** Ultra-compatto e leggero</li>
+                            <li>**Facilità d'uso:** Interfaccia intuitiva</li>
+                            <li>**Qualità sonora:** Timbriche di livello professionale derivate dalla serie GT</li>
+                            <li>**Stato:** [INSERISCI QUI LO STATO ES. Usato, ottime condizioni / Come nuovo / Presenta lievi segni di usura (vedi foto)]</li>
+                            <li>**Alimentazione:** Batterie (AA x4) o alimentatore PSA (non incluso, se non lo fornisci)</li>
+                            <li>**Include:** [INSERISCI COSA INCLUDE ES. Solo unità / Con scatola originale / Con manuale]</li>
+                            </ul>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-2">Interessato a questo articolo?</h3>
+                        <p class="text-gray-600 mb-4">
+                            Per acquistare questo Boss GT-1 o per maggiori informazioni, <a href="contatti.html" class="text-blue-600 hover:text-blue-800 font-semibold hover:underline">contattami direttamente</a>.
+                            Ricorda di specificare il nome o il codice dell'articolo (BOSS-GT1-001).
+                        </p>
+                        <a href="contatti.html" class="inline-block w-full sm:w-auto text-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg">
+                            Contattami per l'acquisto
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; <span id="currentYear"></span> Il Mio Mercatino. Tutti i diritti riservati.</p>
+            <p class="text-sm text-gray-400 mt-2">Un piccolo negozio con grandi tesori.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script per aggiornare l'anno nel footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Script per cambiare l'immagine principale al click sulla thumbnail
+        function changeImage(newImageSrc, clickedThumbnail) {
+            const mainImage = document.getElementById('mainImage');
+            mainImage.src = newImageSrc;
+            // Aggiorna la classe 'active-thumbnail'
+            const thumbnails = document.querySelectorAll('.thumbnail-gallery img');
+            thumbnails.forEach(thumb => thumb.classList.remove('active-thumbnail'));
+            if (clickedThumbnail) { // Controlla se clickedThumbnail è definito
+                 clickedThumbnail.classList.add('active-thumbnail');
+            }
+        }
+    </script>
+
+</body>
+</html>

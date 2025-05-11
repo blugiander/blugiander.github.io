@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Mio Mercatino dell'Usato Eccellente</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Puoi aggiungere stili personalizzati qui o nel file style.css */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .featured-product-image {
+            height: 16rem; /* 256px, h-64 in Tailwind */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600 hover:text-blue-800">Il Mio Mercatino</a>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a></li>
+                    <li><a href="prodotti.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Prodotti</a></li>
+                    <li><a href="contatti.html" class="text-gray-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Contatti & Pagamenti</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+        <section class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Benvenuto nel Mio Mercatino dell'Usato Eccellente!</h1>
+            <p class="text-lg text-gray-600">Scopri oggetti unici e di qualità, pronti per una nuova vita.</p>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-semibold text-gray-700 mb-6">Prodotti in Evidenza</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <a href="boss-gt1.html" class="block hover:opacity-90 transition-opacity duration-300">
+                        <img src="immagini/boss-gt1.jpg" alt="Boss GT-1 Processore Effetti per Chitarra" class="w-full object-cover featured-product-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/cbd5e0?text=Boss+GT-1';this.alt='Immagine Boss GT-1 non trovata';">
+                    </a>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Boss GT-1 Processore Effetti</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">Processore multi-effetto per chitarra, ultra-portatile. Timbriche pro!</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="text-2xl font-bold text-blue-600">70,00 €</span>
+                            <a href="boss-gt1.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                                Dettagli
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <a href="chitarra-elettrica-mexico-1996.html" class="block hover:opacity-90 transition-opacity duration-300">
+                        <img src="immagini/stratocaster.png" alt="Chitarra Elettrica by Mexico nera del 1996" class="w-full object-cover featured-product-image" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/cbd5e0?text=Chitarra+Mexico';this.alt='Immagine Chitarra non trovata';">
+                    </a>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Fender Stratocaster by Mexico '96</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">Nera, produzione messicana del 1996. Un classico dal feel vintage.</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="text-2xl font-bold text-blue-600">350,00 €</span>
+                            <a href="chitarra-elettrica-mexico-1996.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                                Dettagli
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <a href="#" class="block hover:opacity-90 transition-opacity duration-300">
+                        <img src="https://placehold.co/600x400/e2e8f0/cbd5e0?text=Immagine+Prodotto+3" alt="[Immagine Prodotto 3]" class="w-full object-cover featured-product-image">
+                    </a>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">Terzo Articolo da Scoprire</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">Ulteriore descrizione per un prodotto in vetrina.</p>
+                         <div class="flex justify-between items-center mt-auto">
+                            <span class="text-2xl font-bold text-blue-600">€ Prezzo</span>
+                            <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                                Dettagli
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; <span id="currentYear"></span> Il Mio Mercatino. Tutti i diritti riservati.</p>
+            <p class="text-sm text-gray-400 mt-2">Un piccolo negozio con grandi tesori.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Script per aggiornare l'anno nel footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
